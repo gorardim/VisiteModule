@@ -20,6 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+            $data= array();
+            $data=$this->UserModel->allUser();
+            echo '<pre>';
+            print_r($data);
+            exit();
 	}
 }
